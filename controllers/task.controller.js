@@ -1,17 +1,26 @@
+import { error } from "node:console";
 import Task from "../models/Task.js";
 
 export const getTask = async (req, res) => {
-  const tasks = await Task.find();
-  res.json(tasks);
+  try {
+    const tasks = await Task.find();
+    res.json(tasks);
+  } catch (error) {
+    res.status(500).json({ error: "Error getting tasks" });
+  }
 };
 
 export const getTaskByID = async (req, res) => {
-  const { id } = req.params;
-  const task = await Task.findById(id);
-  if (!task) {
-    return res.status(404).json({ error: "Task not found" });
+  try {
+    const { id } = req.params;
+    const task = await Task.findById(id);
+    if (!task) {
+      return res.status(404).json({ error: "Task not found" });
+    }
+    res.json(task);
+  } catch (error) {
+    res.status(400).json({ error: "Invalid task ID" });
   }
-  res.json(task);
 };
 
 export const createTask = async (req, res) => {
