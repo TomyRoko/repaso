@@ -1,0 +1,27 @@
+{
+  "name": "repaso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch --env-file=.env index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomyRoko/repaso.git"
+  },
+  "keywords": [],
+  "author": "TZVETOMIR VESSELINOV DOCHEV",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/TomyRoko/repaso/issues"
+  },
+  "homepage": "https://github.com/TomyRoko/repaso#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.2.4"
+  }
+}
