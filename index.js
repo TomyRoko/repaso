@@ -1,6 +1,7 @@
 import express from "express";
 import "./db.js";
 import taskRouter from "./routes/task.router.js";
+import noteRouter from "./routes/note.router.js";
 
 const app = express();
 
