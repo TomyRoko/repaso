@@ -12,6 +12,8 @@ app.get("/", (req, res) => {
 
 app.use("/task",taskRouter);
 
+app.use("/note", noteRouter);
+
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
